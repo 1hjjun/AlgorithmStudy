@@ -26,9 +26,9 @@ int main()
   }
 
   cin >> k;
-  int *occurs = new int[k]; // 동적할당! 중요!
+  int *occurs = new int[k]; // 동적할당! 중요! int occurs[k] 도 가능
   fill_n(occurs, k, 0);     // <algorithm>
-  int cnt = 0;              // 0으로 초기화!! 중요!
+  int cnt = 0;              // 0으로 초기화!! 중요! 이것땜에 3시간 날림
 
   for (int i = 0; i < n; i++)
   {
