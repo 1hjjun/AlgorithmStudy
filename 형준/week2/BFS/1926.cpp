@@ -3,7 +3,7 @@ using namespace std;
 #define X first
 #define Y second
 
-int board[502][502];
+int board[502][502];  //n, m 이 500 이하이기 때문
 bool vis[502][502];
 int n, m;
 int dx[4] = {1,0,-1,0};
@@ -22,8 +22,8 @@ int main(){
 
   for (int i = 0; i < n; i++){  //(i, j)가 BFS의 시작점이 될 수 있는가를 찾기
     for(int j = 0; j < m; j++){
-      if(board[i][j] == 0 || vis[i][j]) continue;
-      num++;
+      if(board[i][j] == 0 || vis[i][j]) continue; //0이 아니어야 함, 안왔던 곳이어야 함.
+      num++;  //시작점 찾으면 그림수 +1
 
       queue<pair<int,int>> Q;
       vis[i][j] = 1;
